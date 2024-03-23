@@ -1,0 +1,27 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Studio Domu'
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Works'
+pageRef = '/works'
+weight = 20
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+    
+[params]
+  google_fonts = [
+    ["Syne", "400, 700"],
+    ["Inter", "400, 700"]
+  ]
+
+  heading_font = "Syne"
+  body_font = "Inter"
