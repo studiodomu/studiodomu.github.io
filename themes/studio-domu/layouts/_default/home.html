@@ -1,10 +1,8 @@
 {{ define "main" }}
-  <!-- The video -->
-<video autoplay muted loop id="myVideo">
-  <source src="bg.mp4" type="video/mp4">
-</video>
+<div class="cursor"></div>
 
-<div class="content">
-  <h1>{{ .Content }}</h1>
-</div>
+<section id="home-header" class="h-[90vh] text-center justify-center items-center flex flex-col">
+  <h1 id="heading" class="cursor-scale text-[6em] md:text-[10em] font-black tracking-tighter uppercase leading-none text-red-500">Studio Domu</h1>
+  <h2 id="heading-2"class="cursor-scale small text-l md:text-[2em] font-black tracking-widest uppercase leading-none text-neutral-500">Coming soon</h2>
+</section>
 {{ end }}

@@ -5,13 +5,10 @@
   {{ partial "google-fonts" . }}
 </head>
 <body>
-  <header>
-    {{ partial "header.html" . }}
-  </header>
   <main>
     {{ block "main" . }}{{ end }}
   </main>
-  <footer>
+  <footer class="text-xs tracking-widest text-center text-neutral-700">
     {{ partial "footer.html" . }}
   </footer>
 

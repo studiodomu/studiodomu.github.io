@@ -9,25 +9,18 @@ a {
 
 body {
   font-family: $font-body;
-}
-
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
-}
-
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+  background-color: #101010;
+  color: #fff;
+  cursor: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
  font-family: $font-heading; 
 }
 
+
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
-  position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -43,4 +36,31 @@ h1, h2, h3, h4, h5, h6 {
   color: #f1f1f1;
   width: 100%;
   padding: 2em;
+}
+
+
+
+.cursor{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.grow, .grow-small{
+  transform: scale(4);
+  background: white;
+  mix-blend-mode: difference; 
+  border: none;
+}
+
+.grow-small{
+  transform: scale(.5);
 }
