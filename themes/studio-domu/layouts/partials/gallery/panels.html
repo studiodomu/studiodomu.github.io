@@ -1,0 +1,13 @@
+<!-- Panels -->
+<div class="content-row dark-section full" data-bgcolor="#171717">
+    <div class="panels" data-widthratio="1">
+        <div class="panels-container">
+            {{ range .panels }}
+            <div class="panel" data-color="#000" class="has-animation" data-firstline="{{ .firstline }}"
+                data-secondline="{{ .secondline }}">
+                <a href="{{ .image }}" class="image-link"><img src="{{ .image }}"></a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

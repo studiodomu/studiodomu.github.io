@@ -1,12 +1,34 @@
-{{- with resources.Get "js/main.js" }}
-  {{- if eq hugo.Environment "development" }}
-    {{- with . | js.Build }}
-      <script src="{{ .RelPermalink }}"></script>
-    {{- end }}
-  {{- else }}
-    {{- $opts := dict "minify" true }}
-    {{- with . | js.Build $opts | fingerprint }}
-      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
-    {{- end }}
-  {{- end }}
+{{- $additionalScripts := slice "js/jquery.min.js" "js/plugins.js" }}
+{{- range $additionalScripts }}
+{{- $script := resources.Get . }}
+<script src="{{ $script.RelPermalink }}"></script>
+{{- end }}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js"></script>
+
+{{- $jsOpts := dict "minify" true }}
+
+{{- $localScripts := slice
+"js/clapat.js"
+"js/common.js"
+"js/contact.js"
+"js/scripts.js"
+}}
+
+{{- range $localScripts }}
+{{- $script := resources.Get . }}
+{{- if eq hugo.Environment "development" }}
+{{- with $script }}
+<script src="{{ .RelPermalink }}"></script>
+{{- end }}
+{{- else }}
+{{- with $script | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end }}
+{{- end }}
 {{- end }}

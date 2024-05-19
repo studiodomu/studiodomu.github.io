@@ -1,0 +1,17 @@
+<!-- Row -->
+<div class="content-row full row_padding_left row_padding_right dark-section text-align-center change-header-color"
+    data-bgcolor="#0c0c0c">
+    <p>{{ .Title }}</p>
+    <ul class="team-members-list" data-fx="1">
+        {{ range .Params.movies }}
+        <li class="link has-hover-image" data-img="{{ $.RelPermalink | relURL }}/{{ .image }}">
+            <div class="team-member has-animation">
+                <span>{{ .year }}</span>
+                <div class="primary-font-title">{{ .title }}</div>
+                <span>by {{ .author }}</span>
+            </div>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+<!--/Row -->

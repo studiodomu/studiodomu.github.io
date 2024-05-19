@@ -1,0 +1,15 @@
+<!-- Zoom Gallery -->
+<div class="content-row row_padding_bottom dark-section" data-bgcolor="#171717">
+    <div class="zoom-gallery">
+        <ul class="zoom-wrapper-gallery" data-heightratio="0.6">
+            {{ range .images }}
+            <li>
+                <div class="zoom-img-wrapper">
+                    <img src="{{ . }}" alt="Image Title">
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+        <div class="zoom-wrapper-thumb"></div>
+    </div>
+</div>

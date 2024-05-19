@@ -1,0 +1,38 @@
+<!-- Hero Section -->
+<div id="hero" class="has-image autoscroll1">
+    <div id="hero-styles">
+        <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center height-title">
+            <div class="inner">
+                <h1 class="hero-title caption-timeline primary-font-title">
+                    <span>{{ .Params.hero_title | safeHTML }}</span>
+                </h1>
+            </div>
+        </div>
+        <div id="hero-description" class="content-full-width">
+            <div class="inner">
+                <p class="bigger has-opacity">{{ .Params.description }}</p>
+            </div>
+        </div>
+
+        <div id="hero-footer">
+            <div class="hero-footer-left">
+                <div class="button-wrap right scroll-down">
+                    <div class="icon-wrap parallax-wrap">
+                        <div class="button-icon parallax-element">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="button-text sticky right">
+                        <span data-hover="{{ .Params.hero_button_text }}">{{ .Params.hero_button_text }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="hero-image-wrapper">
+        <div id="hero-background-layer" class="parallax-scroll-image">
+            <div id="hero-bg-image" style="background-image:url({{ .Params.hero_image }})"></div>
+        </div>
+    </div>
+</div>
+<!--/Hero Section -->

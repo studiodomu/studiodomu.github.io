@@ -2,3 +2,28 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Studio Domu'
 theme = 'studio-domu'
+
+[params]
+    email = "hello@studiodomu.com"
+    footer = "All rights reserved."
+    social = [
+    { name = "Instagram", url = "https://www.instagram.com/studiodomu/", icon = "instagram" },
+    ]
+
+[menu]
+  [[menu.main]]
+    name = "Projects"
+    url = "#projects-section"
+    weight = 10
+  [[menu.main]]
+    name = "Behind Domu"
+    url = "#behind-domu-section"
+    weight = 20
+  [[menu.main]]
+    name = "About"
+    url = "#about-section"
+    weight = 30
+  [[menu.main]]
+    name = "Contact"
+    url = "#contact-section"
+    weight = 40

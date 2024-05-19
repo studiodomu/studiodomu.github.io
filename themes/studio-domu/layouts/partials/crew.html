@@ -1,0 +1,26 @@
+<!-- Crew Section -->
+<div class="content-row full row_padding_left row_padding_right row_padding_bottom text-align-center dark-section"
+    data-bgcolor="#0c0c0c">
+    <hr>
+    <hr>
+    <hr class="destroy">
+    <h2 class="big-title primary-font-title no-margins has-mask-fill">{{ .title }}</h2>
+    <hr>
+    <hr>
+    <hr>
+    <hr class="destroy">
+
+    <!-- Flex Lists -->
+    <ul class="flex-lists-wrapper">
+        {{ range .crew }}
+        <li class="flex-list link has-animation">
+            <span class="flex-list-left">{{ .role }}</span>
+            <span class="flex-list-center">{{ if .website }}<a href="{{ .website }}" target="_blank">{{ end }}{{ .name
+                    }}{{ if .website }}</a>{{ end }}</span>
+        </li>
+        {{ end }}
+    </ul>
+
+    <hr class="destroy">
+</div>
+<!--/Crew Section -->

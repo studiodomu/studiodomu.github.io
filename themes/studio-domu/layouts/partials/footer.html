@@ -1,1 +1,33 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<!-- Footer -->
+<footer class="hidden">
+  <div id="footer-container">
+
+    <div id="backtotop" class="button-wrap left">
+      <div class="icon-wrap parallax-wrap">
+        <div class="button-icon parallax-element">
+          <i class="fa-solid fa-angle-up"></i>
+        </div>
+      </div>
+      <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div>
+    </div>
+
+    <div class="footer-middle">
+      <div class="copyright">{{ now.Year }} © {{ .Site.Title }}. {{ .Site.Params.footer }}</div>
+    </div>
+
+    <div class="socials-wrap">
+      <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
+      <div class="socials-text">Follow Us</div>
+      <ul class="socials">
+        <li><span class="parallax-wrap"><a class="parallax-element" href="mailto:{{ .Site.Params.email }}"
+              target="_blank"><i class="fa-solid fa-envelope"></i></a></span></li>
+        {{ range .Site.Params.social }}
+        <li><span class="parallax-wrap"><a class="parallax-element" href="{{ .url }}" target="_blank"><i
+                class="fa-brands fa-{{ .icon }}"></i></a></span></li>
+        {{ end }}
+      </ul>
+    </div>
+
+  </div>
+</footer>
+<!--/Footer -->

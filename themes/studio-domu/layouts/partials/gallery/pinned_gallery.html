@@ -1,0 +1,13 @@
+<!-- Pinned Gallery -->
+<div class="content-row row_padding_bottom dark-section text-align-center" data-bgcolor="#171717">
+    <h5 class="no-margins">{{ .title }}</h5>
+    <p>{{ .description }}</p>
+    <hr>
+    <div class="pinned-gallery">
+        {{ range .images }}
+        <div class="pinned-image">
+            <img src="{{ . }}" alt="Image Title">
+        </div>
+        {{ end }}
+    </div>
+</div>

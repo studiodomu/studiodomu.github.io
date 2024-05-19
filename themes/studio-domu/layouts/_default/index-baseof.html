@@ -1,20 +1,52 @@
 <!DOCTYPE html>
-<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
 <head>
   {{ partial "head.html" . }}
   {{ partial "google-fonts" . }}
 </head>
-<body>
+
+
+<body class="hidden hidden-ball smooth-scroll rounded-borders homepage" data-primary-color="#f90000">
   <main>
-    {{ block "main" . }}{{ end }}
+
+    <!-- Preloader -->
+    <div class="preloader-wrap" data-centerLine="DOMU">
+      <video muted autoplay id="video-preloader">
+        <source src="{{ .Params.loader_video }}" type="video/mp4">
+      </video>
+    </div>
+    <!--/Preloader -->
+
+    <div class="cd-index cd-main-content">
+
+      <!-- Page Content -->
+      <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
+
+        <!-- Content Scroll -->
+        <div id="content-scroll">
+
+          {{ partial "header.html" . }}
+          {{ block "main" . }}{{ end }}
+
+          <footer>
+            {{ partial "footer.html" . }}
+          </footer>
+
+
+        </div>
+        <!--/Content Scroll -->
+        <div id="app"></div>
+
+      </div>
+      <!--/Page Content -->
+
+    </div>
   </main>
-  <footer class="text-xs tracking-widest text-center text-neutral-700">
-    {{ partial "footer.html" . }}
-  </footer>
 
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script defer src="https://unpkg.com/split-type"></script>
+  {{ partial "cursor.html" . }}
+  {{ partial "head/js.html" . }}
 </body>
+
 </html>

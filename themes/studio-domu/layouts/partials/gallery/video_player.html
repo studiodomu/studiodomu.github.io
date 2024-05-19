@@ -1,0 +1,27 @@
+<!-- Video Player Partial -->
+<div class="video-wrapper autocenter">
+    <div class="video-cover" data-src="{{ .image }}"></div>
+    <video class="bgvid" controls loop preload="auto">
+        <source src="{{ .trailer_file }}" type="video/mp4">
+    </video>
+    <div class="control">
+        <div class="btmControl">
+            <div class="progress-bar">
+                <div class="progress">
+                    <span class="bufferBar"></span>
+                    <span class="timeBar"></span>
+                </div>
+            </div>
+            <div class="video-btns">
+                <div class="sound sound2 btn" title="Mute/Unmute sound">
+                    <i class="fa fa-volume-up" aria-hidden="true"></i>
+                    <i class="fa fa-volume-off" aria-hidden="true"></i>
+                </div>
+                <div class="btnFS btn" title="Switch to full screen">
+                    <i class="fa fa-expand" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Video Player Partial -->

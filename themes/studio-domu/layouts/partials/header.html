@@ -1,2 +1,18 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<!-- Header -->
+<header class="fullscreen-menu invert-header" data-menucolor="#0c0c0c">
+    <div id="header-container">
+
+        <!-- Logo -->
+        <div id="logo" class="hide-ball">
+            <a class="ajax-link" data-type="page-transition" href="{{ .Site.BaseURL }}">
+                <span class="primary-font-title">{{ .Site.Title }}</span>
+            </a>
+        </div>
+        <!--/Logo -->
+
+
+        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+
+    </div>
+</header>
+<!--/Header -->

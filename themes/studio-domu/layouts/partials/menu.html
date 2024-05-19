@@ -1,51 +1,37 @@
-{{- /*
-Renders a menu for the given menu ID.
-
-@context {page} page The current page.
-@context {string} menuID The menu ID.
-
-@example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-*/}}
-
-{{- $page := .page }}
-{{- $menuID := .menuID }}
-
-{{- with index site.Menus $menuID }}
-  <nav>
-    <ul>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
-  </nav>
-{{- end }}
-
-{{- define "partials/inline/menu/walk.html" }}
-  {{- $page := .page }}
-  {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL }}
-    {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-    {{- else if $page.HasMenuCurrent .Menu .}}
-      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
-    {{- end }}
-    {{- $name := .Name }}
-    {{- with .Identifier }}
-      {{- with T . }}
-        {{- $name = . }}
-      {{- end }}
-    {{- end }}
-    <li>
-      <a
-        {{- range $k, $v := $attrs }}
-          {{- with $v }}
-            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+<!-- Navigation -->
+<nav>
+  <div class="nav-height">
+    <div class="outer">
+      <div class="inner">
+        <ul data-breakpoint="10025" class="flexnav">
+          {{- range site.Menus.main }}
+          <li class="link menu-timeline">
+            <a {{ with .Params.class -}} class="{{ . }}" {{ end -}} href="{{ .URL }}">
+              <div class="before-span"><span data-hover="{{ .Name }}">{{ .Name }}</span></div>
+            </a>
+          </li>
           {{- end }}
-        {{- end -}}
-      >{{ $name }}</a>
-      {{- with .Children }}
-        <ul>
-          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
         </ul>
-      {{- end }}
-    </li>
-  {{- end }}
-{{- end }}
+      </div>
+    </div>
+  </div>
+</nav>
+<!--/Navigation -->
+
+
+<!-- Menu Burger -->
+<div class="button-wrap right menu burger-lines">
+  <div class="icon-wrap parallax-wrap">
+    <div class="button-icon parallax-element">
+      <div id="burger-wrapper">
+        <div id="menu-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-text sticky right"><span data-hover="Menu">Menu</span></div>
+</div>
+<!--/Menu Burger -->

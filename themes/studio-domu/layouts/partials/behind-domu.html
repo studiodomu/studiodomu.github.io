@@ -1,0 +1,20 @@
+<!-- Row -->
+<div id="behind-domu-section"
+    class="content-row full row_padding_left row_padding_right dark-section text-align-center change-header-color"
+    data-bgcolor="#0c0c0c">
+    <div class="slowed-pin">
+        <div class="slowed-text">
+            <h2 class="big-title primary-font-title">{{ .Title }}</h2>
+            {{ .Content }}
+        </div>
+
+        <div class="slowed-images">
+            {{ range .Params.images }}
+            <div class="slowed-image">
+                <img src="{{ $.RelPermalink | relURL }}/{{ . }}" class="link" alt="Image">
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+<!--/Row -->

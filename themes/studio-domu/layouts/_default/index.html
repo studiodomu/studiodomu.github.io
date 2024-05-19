@@ -1,0 +1,68 @@
+{{ define "main" }}
+
+<!-- Main -->
+<div id="main">
+
+  {{ partial "hero.html" . }}
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <!-- Main Page Content -->
+    <div id="main-page-content" class="content-max-width">
+
+      <hr>
+      <hr>
+      <hr class="animated-line has-animation">
+      <hr>
+      <hr>
+      <hr>
+
+      {{ partial "projects.html" . }}
+
+
+      {{ $beforeDomu := .Site.GetPage "before-domu" }}
+      {{ partial "before-domu.html" $beforeDomu }}
+
+
+
+      <hr>
+      <hr class="animated-line has-animation">
+      <hr>
+
+
+      {{ $behindDomu := .Site.GetPage "behind-domu" }}
+      {{ partial "behind-domu.html" $behindDomu }}
+
+
+      <hr>
+      <hr>
+      <hr class="animated-line has-animation">
+      <hr>
+      <hr>
+      <hr>
+
+      {{ $about := .Site.GetPage "about" }}
+      {{ partial "about.html" $about }}
+
+      <hr>
+      <hr>
+      <hr class="animated-line has-animation">
+      <hr>
+      <hr>
+      <hr>
+
+      {{ $contact := .Site.GetPage "contact" }}
+      {{ partial "contact.html" $contact }}
+
+    </div>
+    <!--/Main Page Content -->
+
+
+
+  </div>
+  <!--/Main Content -->
+
+</div>
+<!--/Main -->
+
+{{ end }}

@@ -1,0 +1,34 @@
+<!-- Row -->
+<div id="projects-section" class="content-row full text-align-center row_padding_left row_padding_right dark-section"
+    data-bgcolor="#0c0c0c">
+    <h3 class="has-mask-fill primary-font-title">Projects</h3>
+
+    <div id="itemsWrapperLinks">
+        <div id="itemsWrapper" class="webgl-fitthumbs fx-one">
+            <div class="overlapping-gallery">
+                {{ $projects := .Site.GetPage "section" "projects" }}
+                {{ range $projects.Pages }}
+                <div class="overlapping-image">
+                    <div class="overlapping-image-inner trigger-item" data-centerLine="OPEN">
+                        <div class="img-mask">
+                            <a class="slide-link" data-type="page-transition" href="{{ .RelPermalink }}"></a>
+                            <div class="section-image trigger-item-link">
+                                <img src="{{ .RelPermalink }}/{{ .Params.image }}" class="item-image grid__item-img"
+                                    alt="">
+                            </div>
+                            <img src="{{ .RelPermalink }}/{{ .Params.image }}"
+                                class="grid__item-img grid__item-img--large" alt="">
+                        </div>
+                        <div class="slide-caption trigger-item-link-secondary">
+                            <div class="slide-title primary-font-title"><span>{{ .Title }}</span></div>
+                            <div class="slide-date"><span>{{ .Date.Format "2006" }}</span></div>
+                            <div class="slide-cat"><span>{{ .Params.category }}</span></div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Row -->

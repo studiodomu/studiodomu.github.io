@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<!-- Main -->
+<div id="main">
+
+    {{ partial "hero-projects.html" . }}
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Main Page Content -->
+        <div id="main-page-content" class="content-max-width">
+
+            {{ partial "crew.html" (dict "title" "" "crew" .Params.crew) }}
+
+            <div class="text-align-center"><span class="big-title primary-font-title no-margins has-mask-fill">Watch
+                    it</span></div>
+            <hr>
+            <hr>
+            <hr>
+            <hr class="destroy">
+
+
+            {{ partial "gallery/video_player.html" (dict "image" .Params.image "trailer_file" .Params.trailer_file) }}
+
+            {{ partial "gallery/panels.html" (dict "panels" .Params.panels) }}
+
+
+        </div>
+        <!--/Main Page Content -->
+
+    </div>
+    <!--/Main Content -->
+
+</div>
+<!--/Main -->
+
+{{ end }}

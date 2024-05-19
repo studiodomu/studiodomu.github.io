@@ -20,8 +20,8 @@ weight = 20
 [params]
   google_fonts = [
     ["Syne", "400, 700, 900"],
-    ["DM Sans", "400, 700"]
+    ["Poppins", "300, 400, 500, 600, 700"]
   ]
 
   heading_font = "Syne"
-  body_font = "Space Mono"
+  body_font = "Poppins"

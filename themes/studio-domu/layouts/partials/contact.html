@@ -1,0 +1,22 @@
+<!-- Row -->
+<div id="contact-section"
+    class="content-row full text-align-center row_padding_left row_padding_right row_padding_top row_padding_bottom dark-section"
+    data-bgcolor="#0c0c0c">
+    <p><span class="has-opacity">{{ .Params.headline1 }}</span></p>
+    <div class="next-hero-title primary-font-title caption-timeline has-mask-fill"><span>{{ .Params.headline2 }}</span>
+    </div>
+    <hr>
+    <hr>
+    <div class="button-box text-align-center has-animation fadeout-element">
+        <div class="clapat-button-wrap parallax-wrap hide-ball">
+            <div class="clapat-button parallax-element">
+                <div class="button-border outline rounded parallax-element-second">
+                    <a href="mailto:{{ .Site.Params.email }}" data-type="page-transition">
+                        <span data-hover="{{ .Site.Params.email }}">{{ .Site.Params.email }}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Row -->
