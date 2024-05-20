@@ -2758,6 +2758,7 @@ input[type="submit"] {
 	overflow: hidden;
 	z-index: 0;
 	margin: auto;
+	opacity: 0.4;
 }
 
 .slowed-image {
@@ -3590,8 +3591,8 @@ input[type="submit"] {
 	}
 
 	.team-member {
-		font-size: calc(1rem + 12vw);
-		line-height: calc(1rem + 11.5vw);
+		font-size: calc(1rem + 2vw);
+		line-height: calc(1rem + 1.5vw);
 	}
 
 	span.has-hover-image .hover-reveal {
@@ -3751,7 +3752,7 @@ input[type="submit"] {
 
 	.team-member>div {
 		float: none;
-		margin: 0px;
+		margin: 0px auto;
 		margin-top: 10px;
 		margin-bottom: 4px;
 	}
@@ -3763,8 +3764,8 @@ input[type="submit"] {
 	}
 
 	.team-member {
-		font-size: calc(1rem + 13vw);
-		line-height: calc(1rem + 12.5vw);
+		font-size: calc(1rem + 2vw);
+		line-height: calc(1rem + 1.5vw);
 	}
 
 	.team-members-list .hover-reveal {
@@ -3905,8 +3906,8 @@ input[type="submit"] {
 	}
 
 	.team-member {
-		font-size: calc(1rem + 14vw);
-		line-height: calc(1rem + 13.5vw);
+		font-size: calc(1rem + 2vw);
+		line-height: calc(1rem + 1.5vw);
 	}
 
 	.team-members-list .hover-reveal {

@@ -137,8 +137,8 @@
  	}
 
  	.hero-title {
- 		font-size: calc(1rem + 7vw);
- 		line-height: calc(1rem + 7vw);
+ 		font-size: calc(1rem + 9vw);
+ 		line-height: calc(1rem + 8.5vw);
  		position: relative;
  		display: block;
  		width: auto;
@@ -156,7 +156,8 @@
  	.height-title .hero-title {
  		position: relative;
  		overflow: visible;
- 		white-space: nowrap;
+ 		width: 70%;
+ 		margin: 0 auto;
  	}
 
  	.height-title .hero-title div {
@@ -1184,8 +1185,8 @@
  	@media only screen and (max-width: 1537px) {
 
  		.hero-title {
- 			font-size: calc(1rem + 22.15vw);
- 			line-height: calc(1rem + 20.5vw);
+ 			font-size: calc(1rem + 9.15vw);
+ 			line-height: calc(1rem + 8.5vw);
  		}
 
  		.hero-subtitle {
@@ -1202,8 +1203,8 @@
  		}
 
  		.next-hero-title {
- 			font-size: calc(1rem + 22.15vw);
- 			line-height: calc(1rem + 12.5vw);
+ 			font-size: calc(1rem + 5.15vw);
+ 			line-height: calc(1rem + 4.5vw);
  		}
 
  	}
