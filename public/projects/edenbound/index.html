@@ -8,12 +8,32 @@
 <meta name="description" content="Studio Domu – Film production company based in London" />
 
 <title>The Edenbound | Studio Domu</title>
+<script>
+    if (localStorage.getItem("doNotTrack") === null) {
+        localStorage.setItem("doNotTrack", "1") 
+    }
+    var doNotTrack = localStorage.getItem("doNotTrack");
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E5HQ2GCQST"></script>
+<script>
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E5HQ2GCQST', { 'anonymize_ip': true });
+}
+</script>
+
+
 
 <link rel="stylesheet" href="/style.min.27e972c23afd8cd1663b72c2c7e95cd26c05e2c645888c55e13627995b86d17b.css" integrity="sha256-J&#43;lywjr9jNFmO3LCx&#43;lc0mwF4sZFiIxV4TYnmVuG0Xs=" crossorigin="anonymous">
 <link rel="stylesheet" href="/all.min.c1df615436cabffebcab33c85951c55c1171b6a13f27a0a3d03c2e2374cc2ec6.css" integrity="sha256-wd9hVDbKv/68qzPIWVHFXBFxtqE/J6Cj0DwuI3TMLsY=" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/content.min.4feb624d804e5ecedfbe34c5f0134a78e8f39c335d0d808780a20262bdd813e1.css" integrity="sha256-T&#43;tiTYBOXs7fvjTF8BNKeOjznDNdDYCHgKICYr3YE&#43;E=" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/showcase.min.ba2327a8cb2cb897e803f9ea92bb8b1e71c75f7233d6b5269316b594e978f607.css" integrity="sha256-uiMnqMssuJfoA/nqkruLHnHHX3Iz1rUmkxa1lOl49gc=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/shortcodes.min.734b045c93f81cc3739f52559d637e698ce27ae0e68d440ae7bbe6b8e2aac3e3.css" integrity="sha256-c0sEXJP4HMNzn1JVnWN&#43;aYzieuDmjUQK57vmuOKqw&#43;M=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/shortcodes.min.ff36c2b9dc0f5692a83041837ad2f7213c78a4c21ea8c773228e35f2ae5231b8.css" integrity="sha256-/zbCudwPVpKoMEGDetL3ITx4pMIeqMdzIo418q5SMbg=" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/assets.min.dfee75e51d2a4ca245847746ad0de99b5ff5b4e426cb5162e8e765e6fc2279f4.css" integrity="sha256-3&#43;515R0qTKJFhHdGrQ3pm1/1tOQmy1Fi6Odl5vwiefQ=" crossorigin="anonymous">
   
   
@@ -63,55 +83,6 @@
 
 
         
-<nav>
-  <div class="nav-height">
-    <div class="outer">
-      <div class="inner">
-        <ul data-breakpoint="10025" class="flexnav">
-          <li class="link menu-timeline">
-            <a href="#projects-section">
-              <div class="before-span"><span data-hover="Projects">Projects</span></div>
-            </a>
-          </li>
-          <li class="link menu-timeline">
-            <a href="#behind-domu-section">
-              <div class="before-span"><span data-hover="Behind Domu">Behind Domu</span></div>
-            </a>
-          </li>
-          <li class="link menu-timeline">
-            <a href="#about-section">
-              <div class="before-span"><span data-hover="About">About</span></div>
-            </a>
-          </li>
-          <li class="link menu-timeline">
-            <a href="#contact-section">
-              <div class="before-span"><span data-hover="Contact">Contact</span></div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
-
-
-
-
-<div class="button-wrap right menu burger-lines">
-  <div class="icon-wrap parallax-wrap">
-    <div class="button-icon parallax-element">
-      <div id="burger-wrapper">
-        <div id="menu-burger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="button-text sticky right"><span data-hover="Menu">Menu</span></div>
-</div>
-
 
     </div>
 </header>
@@ -137,7 +108,7 @@
                 <br>
                 <p class="bigger no-margins">Date</p>
                 <p class="has-opacity">2024</p>
-                <p class="has-animation">[ <a class="link-text" target="_blank" href="url"><span
+                <p class="has-animation">[ <a class="link-text" target="_blank" href="https://www.youtube.com/watch?v=uwcB8zRlqBE"><span
                             class="link" data-hover="Website">Website</span></a> ]</p>
             </div>
         </div>
@@ -189,12 +160,12 @@
         
         <li class="flex-list link has-animation">
             <span class="flex-list-left">Director</span>
-            <span class="flex-list-center">Andrew McGee</span>
+            <span class="flex-list-center"><a href="https://www.andrew-mcgee.co.uk/" target="_blank">Andrew McGee</a></span>
         </li>
         
         <li class="flex-list link has-animation">
             <span class="flex-list-left">Writer</span>
-            <span class="flex-list-center">Andrew McGee</span>
+            <span class="flex-list-center"><a href="https://www.andrew-mcgee.co.uk/" target="_blank">Andrew McGee</a></span>
         </li>
         
         <li class="flex-list link has-animation">
@@ -351,7 +322,8 @@
     </div>
 
     <div class="footer-middle">
-      <div class="copyright">2024 © Studio Domu. All rights reserved.</div>
+      <div class="copyright">2024 © <a class="link" href="http://localhost:1313/">Studio Domu</a>. All rights reserved – Intro by <a class="link" href="https://cans.one/">Cans One Studio</a>.</p>
+      </div>
     </div>
 
     <div class="socials-wrap">

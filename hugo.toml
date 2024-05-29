@@ -3,6 +3,14 @@ languageCode = 'en-us'
 title = 'Studio Domu'
 theme = 'studio-domu'
 
+googleAnalytics = "G-E5HQ2GCQST"
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = false
+    respectDoNotTrack = true
+    useSessionStorage = false
+
 [params]
     email = "hello@studiodomu.com"
     footer = "All rights reserved – Intro by <a class=\"link\" href=\"https://cans.one/\">Cans One Studio</a>."
