@@ -3887,15 +3887,15 @@ nav.open {
 	}
 
 	footer {
-		height: 80px;
+		height: 100px;
 	}
 
 	.footer-button-wrap {
-		bottom: 80px;
+		bottom: 100px;
 	}
 
 	#footer-container {
-		height: 80px;
+		height: 100px;
 		padding: 0 30px;
 		margin: 0;
 	}
