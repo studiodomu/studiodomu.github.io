@@ -251,7 +251,6 @@ jQuery(function ($) {
 					gsap.set($("#hero-bg-image"), { scale: 1.1, opacity: 0 });
 					gsap.set($("#hero-caption .hero-title span"), { y: 120, opacity: 0 });
 					gsap.set($("#hero-caption .hero-subtitle span"), { y: 30, opacity: 0 });
-
 					gsap.to($("#hero-bg-image"), { duration: 1, scale: 1, opacity: 1, delay: 0.2, ease: Power2.easeOut });
 
 					if ($("#hero-caption").hasClass("height-title")) {

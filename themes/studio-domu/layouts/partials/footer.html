@@ -12,7 +12,9 @@
     </div>
 
     <div class="footer-middle">
-      <div class="copyright">{{ now.Year }} © {{ .Site.Title }}. {{ .Site.Params.footer }}</div>
+      <div class="copyright">{{ now.Year }} © <a class="link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>. {{
+        .Site.Params.footer | safeHTML}}</p>
+      </div>
     </div>
 
     <div class="socials-wrap">

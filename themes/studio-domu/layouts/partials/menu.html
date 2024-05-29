@@ -7,7 +7,7 @@
           {{- range site.Menus.main }}
           <li class="link menu-timeline">
             <a {{ with .Params.class -}} class="{{ . }}" {{ end -}} href="{{ .URL }}">
-              <div class="before-span"><span data-hover="{{ .Name }}">{{ .Name }}</span></div>
+              <div class="before-span scroll-down"><span data-hover="{{ .Name }}">{{ .Name }}</span></div>
             </a>
           </li>
           {{- end }}

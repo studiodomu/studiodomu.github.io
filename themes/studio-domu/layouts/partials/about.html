@@ -7,7 +7,7 @@
         <h3 class="has-mask-fill primary-font-title">{{ .Title }}</h3>
     </div>
     <div class="two_third last">
-        {{ .Content }}
+        {{ .Content | replaceRE "<p>" "<p class='has-opacity has-animation'>" | safeHTML }}
     </div>
 </div>
 <!--/Row -->

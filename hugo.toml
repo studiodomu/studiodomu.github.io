@@ -5,7 +5,7 @@ theme = 'studio-domu'
 
 [params]
     email = "hello@studiodomu.com"
-    footer = "All rights reserved."
+    footer = "All rights reserved – Intro by <a class=\"link\" href=\"https://cans.one/\">Cans One Studio</a>."
     social = [
     { name = "Instagram", url = "https://www.instagram.com/studiodomu/", icon = "instagram" },
     ]
