@@ -5,17 +5,16 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 
 {{- if .Site.GoogleAnalytics }}
-<!-- Start cookieyes banner -->
-<script id="cookieyes" type="text/javascript"
-    src="https://cdn-cookieyes.com/client_data/179349fc34175548116c5f2c/script.js"></script>
-<!-- End cookieyes banner -->
-<script>
-    if (localStorage.getItem("doNotTrack") === null) {
-        localStorage.setItem("doNotTrack", "1") // default value before any choice has been made
-    }
-    var doNotTrack = localStorage.getItem("doNotTrack");
-</script>
-{{ template "_internal/google_analytics.html" . }}
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KHL6Q8BK');</script>
+<!-- End Google Tag Manager -->
 {{- end}}
 
 {{ partial "head/css.html" . }}
