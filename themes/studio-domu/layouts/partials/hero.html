@@ -31,7 +31,9 @@
     </div>
     <div id="hero-image-wrapper">
         <div id="hero-background-layer" class="parallax-scroll-image">
-            <div id="hero-bg-image" style="background-image:url({{ .Params.hero_image }})"></div>
+            {{ with .Resources.GetMatch .Params.hero_image }}
+            <div id="hero-bg-image" style="background-image:url({{ .RelPermalink }})"></div>
+            {{ end }}
         </div>
     </div>
 </div>
