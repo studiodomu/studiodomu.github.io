@@ -1,6 +1,7 @@
 ---
 title: "Before Domu"
 date: 2024-05-19
+sitemap_exclude: true
 movies:
   - year: "2024"
     title: "First Sight"

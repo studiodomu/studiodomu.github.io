@@ -58,5 +58,3 @@ panels:
     image: "9.png"
 
 ---
-
-Add your content here...

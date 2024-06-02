@@ -1,6 +1,7 @@
 ---
 title: "Behind Domu"
 date: 2024-05-19
+sitemap_exclude: true
 images:
   - "1.jpg"
   - "2.jpg"
