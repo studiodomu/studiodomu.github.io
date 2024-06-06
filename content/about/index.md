@@ -1,7 +1,9 @@
 ---
 title: "About"
 date: 2024-05-19
-sitemap_exclude: true
+hidden: true
+sitemap:
+  disable: true
 ---
 
 Studio Domu thrives on the thrill of the unconventional and obscure, embracing ambitious and mind-bending concepts that dare to defy conventions. Our mission is to push the boundaries of storytelling, to delve into the darkest recesses of imagination, and to champion and support emerging talents from across the globe.
