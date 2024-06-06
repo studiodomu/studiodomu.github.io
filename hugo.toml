@@ -4,8 +4,6 @@ title = 'Studio Domu'
 theme = 'studio-domu'
 disableRSS = true
 
-googleAnalytics = "G-E5HQ2GCQST"
-
 [params]
     email = "hello@studiodomu.com"
     footer = "All rights reserved – Intro by <a class=\"link\" href=\"https://cans.one/\">Cans One Studio</a>."
@@ -30,3 +28,5 @@ googleAnalytics = "G-E5HQ2GCQST"
     name = "Contact"
     url = "#contact-section"
     weight = 40
+
+[taxonomies]
