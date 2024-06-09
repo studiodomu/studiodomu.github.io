@@ -7,7 +7,8 @@
         <li class="link has-hover-image" data-img="{{ $.RelPermalink | relURL }}/{{ .image }}">
             <div class="team-member has-animation">
                 <span>{{ .year }}</span>
-                <div class="primary-font-title">{{ .title }}</div>
+                <div class="primary-font-title"><a href="{{ .website | safeURL }}" target="_blank"
+                        rel="noopener noreferrer">{{ .title }}</a></div>
                 <span>by {{ .author }}</span>
             </div>
         </li>
