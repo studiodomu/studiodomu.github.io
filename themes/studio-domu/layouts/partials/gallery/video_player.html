@@ -1,8 +1,10 @@
-<!-- Video Player Partial -->
 <div class="video-wrapper autocenter">
     <div class="video-cover" data-src="{{ .image }}"></div>
+
+    {{ if .trailer_file }}
     <video class="bgvid" controls loop preload="auto">
         <source src="{{ .trailer_file }}" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
     <div class="control">
         <div class="btmControl">
@@ -23,5 +25,18 @@
             </div>
         </div>
     </div>
+
+    {{ else if .youtube }}
+    <iframe width="100%" height="100%"
+        src="https://www.youtube.com/embed/{{ .youtube }}?autoplay=1&loop=1&mute=1&playlist={{ .youtube }}"
+        frameborder="0" allowfullscreen>
+    </iframe>
+    {{ else if .vimeo }}
+    <iframe width="100%" height="100%" allow="autoplay; fullscreen"
+        src="https://player.vimeo.com/video/{{ .vimeo }}&autoplay=0&loop=1&muted=0&background=0" frameborder="0"
+        allowfullscreen>
+    </iframe>
+    {{ end }}
+
+
 </div>
-<!--/Video Player Partial -->

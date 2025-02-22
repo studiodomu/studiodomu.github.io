@@ -20,14 +20,14 @@
             <hr class="destroy">
 
 
-            {{ partial "gallery/video_player.html" (dict "image" .Params.image "trailer_file" .Params.trailer_file) }}
+            {{ partial "gallery/video_player.html" (dict "image" .Params.image "trailer_file" .Params.trailer_file
+            "youtube" .Params.youtube "vimeo" .Params.vimeo) }}
             <hr>
             <hr>
             <hr>
             <hr class="destroy">
 
-            <div class="text-align-center"><span
-                    class="big-title primary-font-title no-margins has-mask-fill">Stills</span></div>
+            <div class="text-align-center"><span class="big-title primary-font-title no-margins">Stills</span></div>
             <hr>
             <hr>
             <hr>

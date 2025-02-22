@@ -14,8 +14,10 @@
                 <br>
                 <p class="bigger no-margins">Date</p>
                 <p class="has-opacity">{{ .Date.Format "2006" }}</p>
-                <p class="has-animation">[ <a class="link-text" target="_blank" href="{{ .Params.website }}"><span
-                            class="link" data-hover="Website">Website</span></a> ]</p>
+                {{ with .Params.website }}
+                <p class="has-animation">[ <a class="link-text" target="_blank" href="{{ . }}"><span class="link"
+                            data-hover="Website">Website</span></a> ]</p>
+                {{ end }}
             </div>
         </div>
 
@@ -36,9 +38,22 @@
     </div>
     <div id="hero-image-wrapper">
         <div id="hero-background-layer" class="parallax-scroll-image">
-            <video id="hero-bg-image" class="bgvid" autoplay loop muted>
+            {{ if .Params.trailer_file }}
+            <video id="hero-bg-video" class="bgvid" autoplay loop muted>
                 <source src="{{ .Params.trailer_file }}" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
+            {{ else if .Params.youtube }}
+            <iframe id="hero-bg-video" class="bgvid" width="100%" height="100%"
+                src="https://www.youtube.com/embed/{{ .Params.youtube }}?autoplay=1&loop=1&mute=1&playlist={{ .Params.youtube }}"
+                frameborder="0" allowfullscreen>
+            </iframe>
+            {{ else if .Params.vimeo }}
+            <iframe id="hero-bg-video" class="bgvid" width="100%" height="100%"
+                src="https://player.vimeo.com/video/{{ .Params.vimeo }}&autoplay=1&loop=1&muted=1&background=1"
+                frameborder="0" allowfullscreen>
+            </iframe>
+            {{ end }}
         </div>
     </div>
 </div>
