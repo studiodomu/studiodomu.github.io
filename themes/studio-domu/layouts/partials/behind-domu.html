@@ -1,42 +1,37 @@
 <!-- Row -->
-<div id="behind-domu-section"
-    class="content-row full row_padding_left row_padding_right dark-section text-align-center change-header-color"
+<div id="behind-domu-section" class="light-section-wrapper text-align-center change-header-color"
     data-bgcolor="#0c0c0c">
-    <div class="one_third pinned-element">
+    <div class="light-section-container content-max-width">
         <h2 class="has-mask-fill primary-font-title">{{ .Title }}</h2>
-    </div>
-    <div class="two_third last">
-
         {{ range $index, $person := .Params.people }}
-        <div class="content-row row_padding_bottom" data-bgcolor="#fff"
-            style="display: flex; flex-direction: {{ if modBool $index 2 }}row-reverse{{ else }}row{{ end }}; height: 100%;">
+        <div class="content-row row_padding_bottom" data-bgcolor="#fff">
+            <div class="pinned-section">
 
-            <!-- Team Image -->
-            <div class="pinned-element {{ if modBool $index 2 }}left{{ else }}right{{ end }}"
-                style="flex: 1; text-align: center; height: 100%;">
-                <figure class="has-animation rounded-borders">
-                    <img src="{{ $.RelPermalink | relURL }}/{{ $person.photo }}" alt="{{ $person.name }}"
-                        style="max-width:300px;">
-                </figure>
-            </div>
+                <!-- Pinned Element (Text) -->
+                <div class="pinned-element left text-align-right">
+                    <h5 class="no-margins">{{ $person.name }}</h5>
+                    <p><strong>Role:</strong> {{ $person.role }}</p>
+                    <p>{{ $person.bio | markdownify }}</p>
+                    <!-- Website Link -->
+                    <p class="has-animation">
+                        [ <a class="link-text" target="_blank" href="{{ $person.website }}">
+                            <span class="link" data-hover="Website">Website</span>
+                        </a> ]
+                    </p>
+                </div>
 
-            <!-- Team Text -->
-            <div class="scrolling-element"
-                style="flex: 2; padding: 0 60px; text-align: {{ if modBool $index 2 }}right{{ else }}left{{ end }}; height: 100%;">
-                <h5 class="no-margins">{{ $person.name }}</h5>
-                <p><strong>Role:</strong> {{ $person.role }}</p>
-                <p class="has-opacity has-animation">{{ $person.bio }}</p>
-                <!-- Website Link -->
-                <p class="has-animation">
-                    [ <a class="link-text" target="_blank" href="{{ $person.website }}">
-                        <span class="link" data-hover="Website">Website</span>
-                    </a> ]
-                </p>
+                <!-- Scrolling Element (Image) -->
+                <div class="scrolling-element right">
+                    <figure class="has-animation">
+                        <a href="{{ $.RelPermalink | relURL }}/{{ $person.photo }}" class="image-link">
+                            <img src="{{ $.RelPermalink | relURL }}/{{ $person.photo }}" alt="{{ $person.name }}">
+                        </a>
+                    </figure>
+                </div>
+
             </div>
         </div>
         {{ end }}
     </div>
-
-
 </div>
 <!--/Row -->

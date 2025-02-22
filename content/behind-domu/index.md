@@ -13,7 +13,7 @@ people:
   
   - name: "Giacomo Jay Ganduglia"
     role: "Digital Creative Director"
-    bio: "Giacomo Jay Ganduglia (cans1) is a digital artist, art director, and designer specializing in illustration, 3D, motion design, and storytelling. He has worked with both global brands and independent projects and co-founded WAYE. His work fuses raw, tactile aesthetics with sharp digital pixels."
+    bio: "Giacomo Jay Ganduglia (cans1) is a digital artist, art director, and designer specializing in illustration, 3D, motion design, and storytelling. He has worked with both global brands and independent projects and co-founded WAYE. His work fuses raw, tactile aesthetics with sharp digital pixels. [Check Out](https://www.behance.net/gallery/218643971/) more about Studio Domu Visual Identity."
     website: "https://cans.one/"
     photo: "giacomo.jpg"
   
