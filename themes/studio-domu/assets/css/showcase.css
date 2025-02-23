@@ -480,7 +480,7 @@
 .overlapping-image .slide-caption {
 	position: absolute;
 	box-sizing: border-box;
-	padding: 80px;
+	padding: 80px 160px;
 	width: 100%;
 	height: 100%;
 	display: flex;
