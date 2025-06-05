@@ -63,7 +63,8 @@
             {{ else }}
             <div id="hero-image-wrapper">
                 <div id="hero-background-layer" class="parallax-scroll-image">
-                    <div id="hero-bg-image" style="background-image:url('{{ .Params.image }}');"></div>
+                    <div id="hero-bg-image" style="background-image:url('{{ .RelPermalink }}/{{ .Params.image }}');">
+                    </div>
                 </div>
                 <div class="dark-overlay"></div>
             </div>

@@ -13,8 +13,11 @@
                         <div class="img-mask">
                             <a class="slide-link" data-type="page-transition" href="{{ .RelPermalink }}"></a>
                             <div class="section-image trigger-item-link">
-                                <img src="{{ .RelPermalink }}/{{ .Params.image }}" class="item-image grid__item-img"
-                                    alt="">
+                                <div class="image-overlay-container">
+                                    <img src="{{ .RelPermalink }}/{{ .Params.image }}" class="item-image grid__item-img"
+                                        alt="">
+                                    <div class="dark-overlay"></div>
+                                </div>
                             </div>
                             <img src="{{ .RelPermalink }}/{{ .Params.image }}"
                                 class="grid__item-img grid__item-img--large" alt="">
