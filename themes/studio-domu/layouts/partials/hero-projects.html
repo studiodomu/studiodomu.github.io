@@ -18,6 +18,13 @@
                 <p class="has-animation">[ <a class="link-text" target="_blank" href="{{ . }}"><span class="link"
                             data-hover="Website">Website</span></a> ]</p>
                 {{ end }}
+
+                {{ with .Params.buttons }}
+                {{ range . }}
+                <p class="has-animation">[ <a class="link-text" target="_blank" href="{{ .url }}"><span class="link"
+                            data-hover="{{ .name }}">{{ .name }}</span></a> ]</p>
+                {{ end }}
+                {{ end }}
             </div>
         </div>
 
@@ -45,7 +52,7 @@
             </video>
             {{ else if .Params.youtube }}
             <iframe id="hero-bg-video" class="bgvid"
-                src="https://www.youtube.com/embed/{{ .Params.youtube }}?autoplay=1&loop=1&mute=1&playlist={{ .Params.youtube }}"
+                src="https://www.youtube.com/embed/{{ .Params.youtube }}?autoplay=1&loop=1&mute=1&playlist={{ .Params.youtube }}&controls=0"
                 frameborder="0" allowfullscreen>
             </iframe>
             {{ else if .Params.vimeo }}
@@ -53,6 +60,13 @@
                 src="https://player.vimeo.com/video/{{ .Params.vimeo }}&autoplay=1&loop=1&muted=1&background=1"
                 frameborder="0" allowfullscreen>
             </iframe>
+            {{ else }}
+            <div id="hero-image-wrapper">
+                <div id="hero-background-layer" class="parallax-scroll-image">
+                    <div id="hero-bg-image" style="background-image:url('{{ .Params.image }}');"></div>
+                </div>
+                <div class="dark-overlay"></div>
+            </div>
             {{ end }}
         </div>
     </div>

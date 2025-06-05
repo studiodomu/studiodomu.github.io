@@ -6,7 +6,8 @@ image: "1.png"
 description: "The Edenbound is a thrilling sci-fi short film from award-winning director Andrew McGee and produced by Studio Domu."
 synopsis: "Amid an unending planetary war, a pilot’s loyalty is tested when she crashes into enemy territory, where she must face a devastating decision between duty and compassion."
 hero_text: "Explore the Depths of The Edenbound"
-trailer_file: "trailer.mp4"
+#trailer_file: "trailer.mp4"
+youtube: Y33qLA3xT2U
 website: https://www.youtube.com/watch?v=uwcB8zRlqBE
 
 crew:
