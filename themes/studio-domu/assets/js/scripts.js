@@ -203,16 +203,28 @@ jQuery(function ($) {
 
 		gsap.to($("#header-container"), { duration: 0.5, opacity: 1, delay: 0.2, ease: Power2.easeOut });
 
-
 		function initOnFirstLoad() {
 			imagesLoaded('body', function () {
 				if ($('body').hasClass("homepage")) {
-
+					var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+					var videoPreloaderDiv = document.querySelector('[data-videourl]');
 					var videoPreloader = document.getElementById('video-preloader');
-					videoPreloader.play();
-					videoPreloader.onended = function () {
+					if (!isSafari && videoPreloader) {
+						if (videoPreloaderDiv) {
+							var videoUrl = videoPreloaderDiv.getAttribute('data-videourl');
+							videoPreloaderDiv.innerHTML = `
+							<video muted autoplay id="video-preloader">
+								<source src="${videoUrl}" type="video/mp4">
+							</video>
+						`;
+						}
+						videoPreloader.play();
+						videoPreloader.onended = function () {
+							LoadWebsite();
+						};
+					} else {
 						LoadWebsite();
-					};
+					}
 				} else {
 					LoadWebsite();
 				}
