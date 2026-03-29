@@ -29,4 +29,9 @@ disableRSS = true
     url = "#contact-section"
     weight = 40
 
+[module]
+  [[module.mounts]]
+    source = "assets/"
+    target = "static/"
+    
 [taxonomies]
